@@ -1,7 +1,12 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
 }
+
 
 .logo {
   font-size: 48px;
@@ -9,12 +14,22 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  gap: 8px; 
+  
 }
+
+li {
+  display: inline; /* need this to make the list horizontal instead of vertical */
+} 
+
 
 a {
   font-size: 22px;
@@ -22,4 +37,18 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+  
+
+}
+
+.left-links {
+  justify-content: flex-start;
+  /* margin-left: 0px; */
+  margin-right: auto; /* need this to push the words further to the edge*/
+}
+
+.right-links {
+  justify-content: flex-end;
+  /* margin-right: 0px; */
+  margin-left: auto; /* need this to push the words further to the edge*/
 }
