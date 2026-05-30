@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex; /* container for the header content and footer segments */
+  flex-direction: column; /* so that they are top to bottom not left to right */
+  justify-content: space-between; /* so that its at top, middle, bottom in the main axis which is column now */
 }
 
 img {
@@ -16,6 +19,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px; /* for space around words */
 }
 
 input {
@@ -24,3 +28,48 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+ul {
+  list-style-type: none; /* removes dots on list items */
+  padding: 0px; /* removes LHS gap that RHS doesn't have */
+  margin: 0px; /* removes space at the top */
+  display: flex; /* so i can use gap */
+  gap: 15px; /* for space btwn links*/
+  
+}
+
+li {
+  display: inline; /* so that the lists are horizontal and not vertical */
+  
+}
+
+a {
+  text-decoration: none; /* removes lines under links */
+  color: rgb(110, 109, 109);
+}
+
+.header, .footer {
+  display: flex; /* container for left and right links */
+  justify-content: space-between; /* so that the links are spaced out to the lhs and rhs */
+  padding: 20px; /* for space btwn top headers and edges */
+}
+
+.content {
+  display: flex; /* contianer for logo, text and buttons */
+  flex-direction: column; /* so that logo, box, buttons are top to bottom */
+  align-items: center; /* align horizontally cus now cross axis is row */
+  justify-content: center;  /* align vertically cus now main axis is column */
+}
+
+.footer {
+  background: #eee;
+}
+
+
+/*
+remove list bullets
+remove list underline and color
+center logo, title, box, do the thing texts
+but the first list on top and left and right
+same thing for second list but at the bottom
+*/
