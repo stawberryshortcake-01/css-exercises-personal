@@ -19,7 +19,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
-  padding: 8px; /* for space around words */
+  padding: 8px 16px; /* padding for top and bottom then padding for left and right */
 }
 
 input {
@@ -55,14 +55,15 @@ a {
 }
 
 .content {
-  display: flex; /* contianer for logo, text and buttons */
+  display: flex; /* container for logo, text and buttons */
   flex-direction: column; /* so that logo, box, buttons are top to bottom */
   align-items: center; /* align horizontally cus now cross axis is row */
   justify-content: center;  /* align vertically cus now main axis is column */
+  gap: 16px; /* i forgot this !! */
 }
 
 .footer {
-  background: #eee;
+  background: #eee; /* add color to footer */
 }
 
 
@@ -70,6 +71,6 @@ a {
 remove list bullets
 remove list underline and color
 center logo, title, box, do the thing texts
-but the first list on top and left and right
+put the first list on top and left and right
 same thing for second list but at the bottom
 */
