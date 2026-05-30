@@ -13,23 +13,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .modal {
   background: white;
-  width: 480px; 
+  width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex; /* container for the icon and the rest of the text */
+  gap: 16px; /* gap between icon and the container */
+  padding: 16px; /* for space btwn elements and edge of white box */
+}
 
-  padding: 20px; /* for the space btwn the elements and the edge */
+.header {
+    display: flex; /* so that the header and the close button can be side by side */
+    justify-content: space-between; /* to push the x button to the edge */
+    font-size: 20px; /* to make header text bigger */
+    font-weight: bold; /* to make header text bold */
+    margin-bottom: 8px; /*for space btwn header text and body*/
+}
 
-  /*
-  missing:
-  display: flex;
-  gap: 16px;
-  */
-  
+.text {
+    margin-bottom: 16px; /* for space btwn body text and continue/cancel buttons */
 }
 
 .icon {
@@ -40,11 +45,10 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  text-align: center; /* to keep the ! in the center instead of the left */
-
-  /* missing: 
-  flex-shrink: 0;*/
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* prevent icon from being smashed by the text */
 }
 
 .close-button {
@@ -55,16 +59,17 @@ body {
   font-size: 16px;
   height: 24px;
   width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #eee;
-  padding: 0; /* need to keep the close button proportionate */
-
+  padding: 0;
 }
 
 button {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
-  margin-top: 8px;
 }
 
 button.continue {
@@ -78,34 +83,3 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
-
-.header {
-  font-weight: bold;
-  font-size: 20px;
-  flex: 1; /* To keep heading on the lft but x button on the right edge */
-
-  /* missing:
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  */
-  
-}
-
-.top {
-  display: flex; /* Cus its a container for icons and heading */
-  align-items: center; /* Centers items vertically */
-  gap: 20px; /* Adds space btwn icons and heading */
-  
-}
-
-/*
-missing:
-.text {
-  margin-bottom: 16px;
-}
-*/
-
