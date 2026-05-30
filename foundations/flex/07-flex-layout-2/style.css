@@ -44,16 +44,26 @@ body {
   border-radius: 4px;
   width: 300px; /* i want the card shape */
   height: 300px; /* again, for the card shape */
-  margin: 20px; /* for space btwn the cards */
+  margin: 20px; /* for space btwn the cards, can use gap: 32px under manycards instead */
+  padding: 16px; /* i forgot this one */
+
 }
 
 ul {
   list-style-type: none; /* removes dots on list items */
+  /* i forgot these: */
+  margin: 0px;
+  padding: 0px;
 }
 
 li a {
   font-size: 24px; /* requirement */
   color: white; /* requirement */
+  /* can actually just put the ABOVE under a */
+
+
+  margin-bottom: 16px;
+
 }
 
 a {
