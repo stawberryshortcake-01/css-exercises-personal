@@ -2,28 +2,72 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex; /* to space header, content and footer */
+  flex-direction: column; /* so that elements are top to bottom not left to right */
+  justify-content: space-between; /* to space out items, main axis is now column */
+
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px; /* requirement */
+  font-weight: 900; /* requirement */
+  padding-left: 16px; /* requirement */
+  display: flex; /* so i can use align-items to vertically align text */
+  align-items: center; /* make text vertically aligned */
+
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex; /* to use justify content and align items */
+  justify-content: center; /* horizontally center text */
+  align-items: center; /* vertically center text */
 }
 
 .sidebar {
   width: 300px;
+  display: flex; /* so i can use flex shrink */
+  flex-shrink: 0; /* required not to shrink */
   background: royalblue;
   box-sizing: border-box;
+  padding: 16px; /* requirement */
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px; /* i want the card shape */
+  height: 300px; /* again, for the card shape */
+  margin: 20px; /* for space btwn the cards */
+}
+
+ul {
+  list-style-type: none; /* removes dots on list items */
+}
+
+li a {
+  font-size: 24px; /* requirement */
+  color: white; /* requirement */
+}
+
+a {
+  text-decoration: none; /* removes the underline for list items */
+}
+
+.content {
+  display: flex; /* so that content can act as a container for blue and grey parts */
+  flex-grow: 1; /* so that the middle part takes up all avail height, dont use flex: 1 cus we dont want the sidebar to shrink */
+}
+
+.manycards {
+  display: flex; /* so that the cards are horizontal */
+  padding: 48px; /* requirement */
+  flex-wrap: wrap; /* so they wrap */ 
+  
 }
